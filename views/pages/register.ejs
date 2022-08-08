@@ -1,168 +1,275 @@
 <%- include('../partials/head');%>
-<style>
-    body {
-        color: #fff;
-        background:#414141;
-        font-family: 'Roboto', sans-serif;
-    }
+    <%- include('../partials/head');%>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    <!-- Navbar -->
+    <nav class="custom-navbar navbar navbar-expand-lg navbar-dark fixed-top" data-spy="affix" data-offset-top="10">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="btn btn-primary" href="#home" style="margin-right: 10px;">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-primary" href="#about" style="margin-right: 10px;">Nosotros</a>
+                </li>
 
-    .form-control {
-        height: 40px;
-        box-shadow: none;
-        color: #969fa4;
-    }
-
-    .form-control:focus {
-        border-color: #5cb85c;
-    }
-
-    .form-control,
-    .btn {
-        border-radius: 3px;
-    }
-
-    .signup-form {
-        width: 450px;
-        margin: 0 auto;
-        padding: 30px 0;
-        font-size: 15px;
-    }
-
-    .signup-form h2 {
-        color: #636363;
-        margin: 0 0 15px;
-        position: relative;
-        text-align: center;
-    }
-
-    .signup-form h2:before,
-    .signup-form h2:after {
-        content: "";
-        height: 2px;
-        width: 30%;
-        background:  #bb0000;;
-        position: absolute;
-        top: 50%;
-        z-index: 2;
-    }
-
-    .signup-form h2:before {
-        left: 0;
-    }
-
-    .signup-form h2:after {
-        right: 0;
-    }
-
-    .signup-form .hint-text {
-        color: #999;
-        margin-bottom: 30px;
-        text-align: center;
-    }
-
-    .signup-form form {
-        color: #999;
-        border-radius: 3px;
-        margin-bottom: 15px;
-        background: #f2f3f7;
-        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-        padding: 30px;
-    }
-
-    .signup-form .form-group {
-        margin-bottom: 20px;
-    }
-
-    .signup-form input[type="checkbox"] {
-        margin-top: 3px;
-    }
-
-    .signup-form .btn {
-        font-size: 16px;
-        font-weight: bold;
-        min-width: 140px;
-        outline: none !important;
-    }
-
-    .signup-form .row div:first-child {
-        padding-right: 10px;
-    }
-
-    .signup-form .row div:last-child {
-        padding-left: 10px;
-    }
-
-    .signup-form a {
-        color: #fff;
-        text-decoration: underline;
-    }
-
-    .signup-form a:hover {
-        text-decoration: none;
-    }
-
-    .signup-form form a {
-        color: #bb0000;
-        text-decoration: none;
-    }
-
-    .signup-form form a:hover {
-        text-decoration: underline;
-            
-    }
-    
-</style>
-<body>
-    <nav class="navbar navbar-dark bg-dark">
-        <div class="container-fluid justify-content-center">
-            <a class="btn btn-outline-primary me-2" href="/login">Iniciar Sesión</a>
+                <li class="nav-item">
+                    <a class="btn btn-primary" href="#gallary" style="margin-right: 10px;">Galeria</a>
+                </li>
+            </ul>
+            <a class="navbar-brand m-auto" href="#">
+                <img src="/assets/imgs/y.png" class="brand-img" alt="">
+                <span class="brand-txt">Red Pic</span>
+            </a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="btn btn-primary" href="#blog" style="margin-right: 10px;">Blog<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-primary" href="#contact" style="margin-right: 10px;">Contactanos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-primary" style="margin-right: 10px;" onclick="logout()">Cerrar Sesión</a>
+                </li>
+                <li class="nav-item">
+                </li>
+            </ul>
         </div>
     </nav>
-    <div class="signup-form mt-3">
-        <div class="justify-content-center">
-            <img src="/assets/imgs/y.png" width="65" height="65">
+    <!-- header -->
+    <header id="home" class="header">
+        <div class="overlay text-white text-center">
+            <h1 class="display-2 font-weight-bold my-3">RED PIC</h1>
+            <h2 class="display-4 mb-5">Amazing  Photos</h2>
+            <a class="btn btn-lg btn-primary" href="#gallary">Visita nuestra galería</a>
         </div>
-        <form action="addUser()">
-            <h2>Registro</h2>
-            <p class="hint-text">Crea tu cuenta, solo toma un minuto.</p>
-            <div class="mb-4">
-                <label for="email" calls="form-label">Email</label>
-                <input type="email" class="form-control" name="email" id="email" required>
+    </header>
+
+    <!--  About Section  -->
+    <div id="about" class="container-fluid wow fadeIn" id="about"data-wow-duration="1.5s">
+        <div class="row">
+            <div class="col-lg-6 has-img-bg"></div>
+            <div class="col-lg-6">
+                <div class="row justify-content-center">
+                    <div class="col-sm-8 py-5 my-5">
+                        <h2 class="mb-4">NOSOTROS</h2>
+                        <p>Esta página web es 100% mexicana; Apoyando a todos los fotógrafos con conocimientos profesionales de fotografía. RED PIC busca ser el intermediario entre las empresas y los fotógrafos; Publicando tus fotografías en nuestro sitio web, creándote un perfil con datos verdaderos así la empresa que busque determinado trabajo nos busca y si ve alguna fotografía que le interese pueda contactar directamente con el fotógrafo para desarrollar a fondo la idea de la empresa o si la compañía quiere usar cualquier imagen que aparezca en la página; La puede comprar o hasta llegar a algún acuerdo con el fotógrafo.</p>
+                        <p><b>RED PIC. Tu mejor sitio para mostrar tu trabajo; rápido y profesionalmente.
+                            Hazte conocer y regístrate.
+                            </b></p>
+                        <p>Todas las fotografías tienen sus respectivos derechos de autor para asegurar a todo el fotógrafo que cuenten con una cuenta de registro en la página web.</p>
+                    </div>
+                </div>
             </div>
-            <div class="mb-4">
-                <label for="text" calls="form-label">Nombre de Usuario</label>
-                <input type="text" class="form-control" name="user" id="user" required>
-            </div>
-            <div class="mb-4">
-                <label for="password" calls="form-label">Contraseña</label>
-                <input type="password" class="form-control" name="password" id="password" maxlength="16" minlength="8" required>
-            </div>
-            <div class="form-group">
-                <button type="button" class="btn btn-primary btn-lg" onclick="addUser()">Registrar Ahora</button>
-            </div>
-        </form>
-        <div class="text-center">Ya tienes una cuenta?
-            <a href="/login">Inicia Sesión.</a>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script>
-        function addUser() {
-            var producto = {};
-            producto.email = document.getElementById("email").value;
-            producto.login = document.getElementById("user").value;
-            producto.password = document.getElementById("password").value;
-            axios.post("https://redpic.herokuapp.com/nuevoUser", producto)
-                .then((response) => {
-                    alert("Cuenta Creada");
-                    console.log("Insertado Exitosamente");
-                })
-                .catch((error) => {
-                    alert("Hubo un error intentalo mas tarde");
-                    console.log(error)
 
-                });
-        }
-    </script>
+    <!--  gallary Section  -->
+    <div id="gallary" class="text-center bg-dark text-light has-height-md middle-items wow fadeIn">
+        <h2 class="section-title"></h2>
+    </div>
+    <div class="gallary row">
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="/assets/imgs/Cowboy Shot.jpeg" alt="template by DevCRID http://www.devcrud.com/" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon ti-plus"></i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="/assets/imgs/Euphoria7.png" alt="template by DevCRID http://www.devcrud.com/" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon ti-plus"></i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="/assets/imgs/Boyvans.jpg" alt="template by DevCRID http://www.devcrud.com/" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon ti-plus"></i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="/assets/imgs/Trinity.jpeg" alt="template by DevCRID http://www.devcrud.com/" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon ti-plus"></i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="/assets/imgs/holi.JPG" alt="template by DevCRID http://www.devcrud.com/" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon ti-plus"></i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="/assets/imgs/sholo.JPG" alt="template by DevCRID http://www.devcrud.com/" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon ti-plus"></i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="/assets/imgs/gallary-7.jpg" alt="template by DevCRID http://www.devcrud.com/" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon ti-plus"></i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="/assets/imgs/gallary-8.jpg" alt="template by DevCRID http://www.devcrud.com/" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon ti-plus"></i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="/assets/imgs/Asa.jpg" alt="template by DevCRID http://www.devcrud.com/" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon ti-plus"></i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="/assets/imgs/Gatito.jpg" alt="template by DevCRID http://www.devcrud.com/" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon ti-plus"></i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="/assets/imgs/Hola.JPG" alt="template by DevCRID http://www.devcrud.com/" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon ti-plus"></i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="/assets/imgs/Aguascalientes.JPG" alt="template by DevCRID http://www.devcrud.com/" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon ti-plus"></i>
+            </a>
+        </div>
+    </div>
+    
+    
+
+    <!-- BLOG Section  -->
+    <div id="blog" class="container-fluid bg-dark text-light py-5 text-center wow fadeIn">
+        <h2 class="section-title py-5">RECOMENDACIONES</h2>
+        <div class="row justify-content-center">
+            <div class="col-sm-7 col-md-4 mb-5">
+                <ul class="nav nav-pills nav-justified mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#foods" role="tab" aria-controls="pills-home" aria-selected="true">Paquetes personales</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#juices" role="tab" aria-controls="pills-profile" aria-selected="false">Paquetes profesionales</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="foods" role="tabpanel" aria-labelledby="pills-home-tab">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card bg-transparent border my-3 my-md-0">
+                            <img src="/assets/imgs/Gradua2.jpg" alt="template by DevCRID http://www.devcrud.com/" class="rounded-0 card-img-top mg-responsive">
+                            <div class="card-body">
+                                <h1 class="text-center mb-4"><a href="#" class="badge badge-primary">$350</a></h1>
+                                <h4 class="pt20 pb20">Prom night </h4>
+                                <p class="text-white">Paquete de fiesta de baile; Paquete de 30 fotos en total. 15 fotos grupales y 15 individuales o en pareja.Se añaden una copia de las imagenes de manera digital. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card bg-transparent border my-3 my-md-0">
+                            <img src="/assets/imgs/Lis.jpg" alt="template by DevCRID http://www.devcrud.com/" class="rounded-0 card-img-top mg-responsive">
+                            <div class="card-body">
+                                <h1 class="text-center mb-4"><a href="#" class="badge badge-primary">$400</a></h1>
+                                <h4 class="pt20 pb20">Graduaciones</h4>
+                                <p class="text-white">Paquete para enventos de graduaciones; Paquete con un total de 32 fotos,20 fotos grupales y 12 fotografias individuales o en pareja. Se añade copia de las imagenes de manera digital y dos fotos impresas. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card bg-transparent border my-3 my-md-0">
+                            <img src="/assets/imgs/BodaMiguel.jpg" alt="template by DevCRID http://www.devcrud.com/" class="rounded-0 card-img-top mg-responsive">
+                            <div class="card-body">
+                                <h1 class="text-center mb-4"><a href="#" class="badge badge-primary">$650</a></h1>
+                                <h4 class="pt20 pb20">Compromisos / Bodas</h4>
+                                <p class="text-white">Paquete para eventos de boda o compromiso; Con un total de 100 fotos. Con su copia de manera digital y 2 fotos impresas tamaño familiar. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="juices" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <div class="row">
+                    <div class="col-md-4 my-3 my-md-0">
+                        <div class="card bg-transparent border">
+                            <img src="/assets/imgs/Fiesta inn.jpg" alt="template by DevCRID http://www.devcrud.com/" class="rounded-0 card-img-top mg-responsive">
+                            <div class="card-body">
+                                <h1 class="text-center mb-4"><a href="#" class="badge badge-primary">$350 a $3800</a></h1>
+                                <h4 class="pt20 pb20">Fotografía publicitaria</h4>
+                                <p class="text-white">Paquete para promocionar eventos o publicidad empresarial. Paquete con un total de 100 fotografías.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 my-3 my-md-0">
+                        <div class="card bg-transparent border">
+                            <img src="/assets/imgs/ProfesionalXime.jpg" alt="template by DevCRID http://www.devcrud.com/" class="rounded-0 card-img-top mg-responsive">
+                            <div class="card-body">
+                                <h1 class="text-center mb-4"><a href="#" class="badge badge-primary">$350</a></h1>
+                                <h4 class="pt20 pb20">Sesión Profesional</h4>
+                                <p class="text-white">Paquete de sesión fotografía profesional, con un total de 100 fotografías e 5 fotografías impresas. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 my-3 my-md-0">
+                        <div class="card bg-transparent border">
+                            <img src="/assets/imgs/PaqueteProfesional2.jpg" alt="template by DevCRID http://www.devcrud.com/" class="rounded-0 card-img-top mg-responsive">
+                            <div class="card-body">
+                                <h1 class="text-center mb-4"><a href="#" class="badge badge-primary">$450 a $770</a></h1>
+                                <h4 class="pt20 pb20">Fotografía para eventos sociales</h4>
+                                <p class="text-white">Paquete para eventos sociales; Se cubre todo el evento, un total de 200 fotografias y 30 fotografías impresas. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of page footer -->
+	<!-- core  -->
+    <script src="/assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="/assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+    <!-- bootstrap affix -->
+    <script src="/assets/vendors/bootstrap/bootstrap.affix.js"></script>
+    <!-- wow.js -->
+    <script src="/assets/vendors/wow/wow.js"></script>
+    <!-- google maps -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtme10pzgKSPeJVJrG1O3tjR6lk98o4w8&callback=initMap"></script>
+    <!-- FoodHut js -->
+    <script src="/assets/js/foodhut.js"></script>
+    <div id="contact" class="container-fluid bg-dark text-light border-top wow fadeIn"><%- include('../partials/footer');%></div>
+ 
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+    function checarToken(){
+        request={};
+        request.token=sessionStorage.getItem('ttoken');
+        axios.post("https://dashboard.heroku.com/apps/redpic/logsauth", request)
+        .then((response)=>{
+            console.log("Conectado al index con éxito");
+        })
+        .catch((error)=>{
+            alert("Sesión expirada");
+            window.location.href="/login";
+            console.log(error);
+        });
+    }
+    checarToken();
+    function logout(){
+        request={};
+        request.token=(sessionStorage.removeItem('ttoken'));
+        window.location.href="/login";
+    }
+</script>
 </body>
 </html>
