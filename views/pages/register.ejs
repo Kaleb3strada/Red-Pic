@@ -152,7 +152,7 @@
             producto.email = document.getElementById("email").value;
             producto.login = document.getElementById("user").value;
             producto.password = document.getElementById("password").value;
-            axios.post("http://127.0.0.1:8080/nuevoUser", producto)
+            axios.post("https://redpic.herokuapp.com/nuevoUser", producto)
                 .then((response) => {
                     alert("Cuenta Creada");
                     console.log("Insertado Exitosamente");
