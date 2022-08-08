@@ -152,7 +152,7 @@
         datos={};
         datos.login=document.getElementById('user').value;
         datos.password=document.getElementById('password').value;
-        axios.post("https://redpic.herokuapp.com//login", datos)
+        axios.post("https://redpic.herokuapp.com/login", datos)
         .then((response)=>{
             sessionStorage.setItem('ttoken', response.data.token);
             window.location.href="/";
