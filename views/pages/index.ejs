@@ -254,7 +254,7 @@
     function checarToken(){
         request={};
         request.token=sessionStorage.getItem('ttoken');
-        axios.post("http://127.0.0.1:8080/auth", request)
+        axios.post("https://redpic.herokuapp.com/auth", request)
         .then((response)=>{
             console.log("Conectado al index con éxito");
         })
