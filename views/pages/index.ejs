@@ -259,6 +259,7 @@
             console.log("Conectado al index con éxito");
         })
         .catch((error)=>{
+		console.log(error);
             alert("Sesión expirada");
             window.location.href="/login";
             console.log(error);
