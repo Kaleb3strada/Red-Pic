@@ -59,6 +59,7 @@ redpic.post('/auth',(req,res)=>{
         var decoded=jwt.verify(token, 'accessKey');
         jwt.verify(token, 'accessKey', (err, authData)=>{
             if(err){
+                console.log(error);
                 res.sendStatus(403);
             }
             else{
@@ -66,6 +67,7 @@ redpic.post('/auth',(req,res)=>{
             }
         });
     }catch(error){
+        console.log(error);
         res.sendStatus(500);
     }
 });
